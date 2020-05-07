@@ -7,19 +7,9 @@ export default [
     input: 'src/main.js',
 		external: ['ms'],
     output: [
-      {
-        name: 'howLongUntilLunch',
-        file: pkg.browser,
-        format: 'umd'
-      },
-      {
-        file: pkg.main,
-        format: 'cjs'
-      },
-      {
-        file: pkg.module,
-        format: 'es'
-      }
+      { file: pkg.browser, format: 'umd', name: 'howLongUntilLunch' },
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' }
     ],
     plugins: [
       resolve(),
